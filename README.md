@@ -38,3 +38,34 @@ get
 # Exit HttpRepl
 exit
 ```
+
+## Testing APIs with .http Files
+
+.http files provide a standard format for testing API endpoints directly from your IDE. Supported in Visual Studio and Visual Studio Code (with REST Client extension).
+
+The project includes `dot-net-web-api.http` file preconfigured with:
+- `@ContosoPizza_HostAddress` variables
+- GET commands for testing endpoints
+- Accepts `application/json` responses
+
+To use:
+1. Open the `.http` file
+2. Click "Send Request" above any HTTP command
+3. View the response in a new window
+
+Example response:
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+    {
+        "date": "2024-01-18",
+        "temperatureC": -2,
+        "temperatureF": 29,
+        "summary": "Warm"
+    },
+    ...
+]
+```
