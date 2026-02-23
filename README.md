@@ -4,6 +4,7 @@
 
 ```bash
 dotnet new webapi -controllers -f net8.0
+dotnet build
 dotnet run
 ```
 
