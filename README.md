@@ -1,5 +1,17 @@
 # dot-net-web-api
 
+An ASP.NET Core web API running on .NET 8.0 that demonstrates CRUD operations (Create, Read, Update, Delete) for managing pizzas using an in-memory cache.
+
+## Overview
+
+This project demonstrates creating a web API with ASP.NET Core by:
+
+- Creating a new application using the ASP.NET Core Web API template
+- Creating controller classes that inherit from `ControllerBase` with methods that respond to HTTP requests
+- Focusing on individual controller actions to build functional web APIs quickly
+
+**Note:** This implementation uses an in-memory cache for simplicity and CRUD demonstration purposes. Data is not persisted and will be lost when the application stops. Production applications should use a database or persistent storage.
+
 ## Commands
 
 ```bash
@@ -36,8 +48,53 @@ cd WeatherForecast
 # Make a GET request
 get
 
+# Get a specific item by ID
+get 1
+
 # Exit HttpRepl
 exit
+```
+
+### Testing CRUD Operations with HTTP REPL
+
+Navigate to an endpoint and list operations:
+
+```bash
+cd Pizza
+ls
+# Output shows: .  [GET|POST]  and  {id}  [GET|PUT|DELETE]
+```
+
+**CREATE** - Add a new item with POST:
+
+```bash
+post -c "{"name":"Hawaii", "isGlutenFree":false}"
+# Returns 201 Created with the new item
+```
+
+**UPDATE** - Modify an item with PUT:
+
+```bash
+put 3 -c "{"id": 3, "name":"Hawaiian", "isGlutenFree":false}"
+# Returns 204 No Content on success
+```
+
+**READ** - Get items:
+
+```bash
+# Get all items
+get
+
+# Get specific item by ID
+get 3
+# Returns 200 OK with the item
+```
+
+**DELETE** - Remove an item:
+
+```bash
+delete 3
+# Returns 204 No Content on success
 ```
 
 ## Testing APIs with .http Files
