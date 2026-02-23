@@ -4,3 +4,16 @@ GET {{dot_net_web_api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET  {{dot_net_web_api_HostAddress}}/pizza/
+Accept: application/json
+
+###
+
+GET {{dot_net_web_api_HostAddress}}/pizza/1
+Accept: application/json
+
+###
+
+GET {{dot_net_web_api_HostAddress}}/pizza/6
+Accept: application/json
