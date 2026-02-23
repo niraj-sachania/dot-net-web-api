@@ -10,10 +10,37 @@ Accept: application/json
 
 ###
 
-GET {{dot_net_web_api_HostAddress}}/pizza/1
+GET {{dot_net_web_api_HostAddress}}/pizza/3
 Accept: application/json
 
 ###
 
 GET {{dot_net_web_api_HostAddress}}/pizza/6
 Accept: application/json
+
+###
+
+POST {{dot_net_web_api_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Hawaii",
+    "isGlutenFree": false
+}
+
+###
+
+PUT {{dot_net_web_api_HostAddress}}/pizza/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Hawaiian",
+    "isGlutenFree": false
+}
+
+###
+
+DELETE {{dot_net_web_api_HostAddress}}/pizza/3
+
+###
