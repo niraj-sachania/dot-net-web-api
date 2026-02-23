@@ -44,11 +44,11 @@ exit
 .http files provide a standard format for testing API endpoints directly from your IDE. Supported in Visual Studio and Visual Studio Code (with REST Client extension).
 
 The project includes `dot-net-web-api.http` file preconfigured with:
-- `@ContosoPizza_HostAddress` variables
+
+- `@dot_net_web_api_HostAddress` variables
 - GET commands for testing endpoints
 - Accepts `application/json` responses
 
-To use:
 1. Open the `.http` file
 2. Click "Send Request" above any HTTP command
 3. View the response in a new window
